@@ -1,5 +1,3 @@
-
-
 const createToDo = document.getElementById('create-to-do');
 const toDoList = document.getElementById('to-do-list');
 createToDo.addEventListener('click', function(){
@@ -18,4 +16,5 @@ createToDo.addEventListener('click', function(){
   toDoInput.value = "";
   return;
 });
+
 
