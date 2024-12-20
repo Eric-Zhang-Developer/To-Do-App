@@ -14,7 +14,6 @@ createToDo.addEventListener('click', function(){
   toDoList.appendChild(toDo);
   // Reset Search Bar
   toDoInput.value = "";
-  return;
 });
 
 
