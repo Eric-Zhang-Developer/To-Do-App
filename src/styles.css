@@ -10,13 +10,12 @@ body{
 }
 
 .to-do-bar > * {
-  padding: 10px;
+  padding: .5rem;
   font-size: 1rem;
 }
 
-.to-do{
-  list-style-position: inside;
-  font-size: .8rem;
+.to-do-container{
+
   margin-bottom: 10px;
   background-color: white;
   padding: .5rem;
@@ -24,7 +23,44 @@ body{
   border-width: 1px;
   border-radius: 10px;
   margin-right: 2rem;
+  min-height: 2rem;
 
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.to-do-text-box{
+  list-style-position: inside;
+  font-size: 1rem;
+  margin: 0px;
+}
+
+.to-do-check-box{
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+
+
+  border-radius: 5px;
+}
+
+.to-do-delete-button{
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+
+  /* Style Looks */
+  background-color: rgba(255, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.to-do-delete-button:hover{
+  background-color: rgba(255, 0, 0, 0.75);
+  transition: background-color, .3s
 }

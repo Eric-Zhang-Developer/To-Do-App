@@ -18,17 +18,28 @@ function newToDo(){
   }
   // Create a new to-do and append it to the to do list 
   // We will create 3 sub elements: Checkbox, textbox, and delete button
+
+  // Element Creation
   const toDoContainer = document.createElement('li');
   const toDoTextBox = document.createElement('p');
   const toDoCheckBox = document.createElement('input');
   const toDoDeleteButton = document.createElement('button');
-  //
 
-  toDoContainer.setAttribute('class', 'to-do');
+  // Element Attribute Setting
+  toDoContainer.setAttribute('class', 'to-do-container');
+  toDoTextBox.setAttribute('class', 'to-do-text-box');
+  toDoCheckBox.setAttribute('class', 'to-do-check-box');
+  toDoDeleteButton.setAttribute('class', 'to-do-delete-button');
+  toDoCheckBox.setAttribute('type', 'checkbox');
+  toDoDeleteButton.textContent = '×';
+
+  // Set to-do's text
   toDoTextBox.textContent = toDoText;
 
 
 
+
+  // Add elements to webpage 
   toDoContainer.appendChild(toDoCheckBox);
   toDoContainer.appendChild(toDoTextBox);
   toDoContainer.appendChild(toDoDeleteButton);
