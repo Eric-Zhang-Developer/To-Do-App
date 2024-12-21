@@ -40,6 +40,13 @@ body{
 
 
   box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color .3s;
+}
+
+/*  State Change for if check box is checked */
+.checked{
+  background-color: rgba(138, 255, 138, 0.5);
+
 }
 
 .to-do-text-box{

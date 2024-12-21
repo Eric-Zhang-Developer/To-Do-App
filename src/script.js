@@ -46,9 +46,24 @@ function newToDo(){
   toDoInput.value = "";
 }
 
-// Delete to do
+
 toDoList.addEventListener('click', (event) => {
+  // Delete to do function
   if (event.target.classList.contains('to-do-delete-button')){
     event.target.parentElement.remove();
   }
+  // Color change on checkbox click
+  else if(event.target.classList.contains('to-do-check-box')){
+    console.log(event.target.checked);
+    // Turn box either light green or default color depending on check status
+    if (event.target.checked){
+      event.target.parentElement.classList.add('checked');
+    }
+    else{
+      event.target.parentElement.classList.remove('checked');
+    }
+  }
 });
+
+
+
