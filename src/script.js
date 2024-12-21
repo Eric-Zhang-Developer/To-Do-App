@@ -1,7 +1,12 @@
 const createToDo = document.getElementById('create-to-do');
 const toDoList = document.getElementById('to-do-list');
-createToDo.addEventListener('click', newToDo);
 
+createToDo.addEventListener('click', newToDo);
+document.addEventListener('keydown', function(event) {
+  if(event.key === "Enter"){
+    newToDo();
+  }
+});
 
 // Create a new To-Do
 function newToDo(){
