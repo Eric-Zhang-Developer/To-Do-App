@@ -36,9 +36,6 @@ function newToDo(){
   // Set to-do's text
   toDoTextBox.textContent = toDoText;
 
-
-
-
   // Add elements to webpage 
   toDoContainer.appendChild(toDoCheckBox);
   toDoContainer.appendChild(toDoTextBox);
@@ -48,3 +45,10 @@ function newToDo(){
   // Reset Search Bar
   toDoInput.value = "";
 }
+
+// Delete to do
+toDoList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('to-do-delete-button')){
+    event.target.parentElement.remove();
+  }
+});
