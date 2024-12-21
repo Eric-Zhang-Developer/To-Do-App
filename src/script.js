@@ -1,6 +1,10 @@
 const createToDo = document.getElementById('create-to-do');
 const toDoList = document.getElementById('to-do-list');
-createToDo.addEventListener('click', function(){
+createToDo.addEventListener('click', newToDo);
+
+
+// Create a new To-Do
+function newToDo(){
   let toDoInput = document.getElementById('input-bar');
   const toDoText = toDoInput.value;
   if (toDoText === ""){ // Edge case check for empty to-do
@@ -14,6 +18,4 @@ createToDo.addEventListener('click', function(){
   toDoList.appendChild(toDo);
   // Reset Search Bar
   toDoInput.value = "";
-});
-
-
+}
