@@ -54,14 +54,8 @@ toDoList.addEventListener('click', (event) => {
   }
   // Color change on checkbox click
   else if(event.target.classList.contains('to-do-check-box')){
-    console.log(event.target.checked);
     // Turn box either light green or default color depending on check status
-    if (event.target.checked){
-      event.target.parentElement.classList.add('checked');
-    }
-    else{
-      event.target.parentElement.classList.remove('checked');
-    }
+    event.target.parentElement.classList.toggle('checked');
   }
 });
 
