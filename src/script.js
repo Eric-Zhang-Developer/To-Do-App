@@ -17,10 +17,23 @@ function newToDo(){
     return;
   }
   // Create a new to-do and append it to the to do list 
-  const toDo = document.createElement('li');
-  toDo.setAttribute('class', 'to-do');
-  toDo.textContent = toDoText;
-  toDoList.appendChild(toDo);
+  // We will create 3 sub elements: Checkbox, textbox, and delete button
+  const toDoContainer = document.createElement('li');
+  const toDoTextBox = document.createElement('p');
+  const toDoCheckBox = document.createElement('input');
+  const toDoDeleteButton = document.createElement('button');
+  //
+
+  toDoContainer.setAttribute('class', 'to-do');
+  toDoTextBox.textContent = toDoText;
+
+
+
+  toDoContainer.appendChild(toDoCheckBox);
+  toDoContainer.appendChild(toDoTextBox);
+  toDoContainer.appendChild(toDoDeleteButton);
+  toDoList.appendChild(toDoContainer);
+  
   // Reset Search Bar
   toDoInput.value = "";
 }
