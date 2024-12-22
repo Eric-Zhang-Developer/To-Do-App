@@ -17,15 +17,26 @@ body{
 }
 
 .input-bar{
-  border-radius: 5px;
   border-style: solid;
   border-width: 1px;
+  cursor: text;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .3s;
+  border-radius: 10px;
 }
+
+.input-bar:focus{
+  box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, .3);
+  outline-color: rgba(255, 0, 0, 0.3); 
+  outline-width: 2px;
+}
+
 
 .create-to-do-button{
   width: auto;
   margin-left: 3rem;
   margin-right: 3rem;
+  cursor: pointer;
 }
 
 .to-do-bar{
