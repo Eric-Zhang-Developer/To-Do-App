@@ -152,8 +152,6 @@ body{
   }
 
   .to-do-list{
-    justify-content: center;
-    align-items: center;
     padding-left: 0rem;
   }
 
@@ -167,7 +165,7 @@ body{
     text-align: center;
   }
 
-  
+
 
 
 }
