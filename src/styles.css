@@ -8,6 +8,7 @@ body{
   background: linear-gradient(0deg, rgba(0, 166, 255, 0.5), rgba(255, 0, 0, 0.5));
   height: 100vh;
   padding: 1rem;
+  color: black;
 }
 
 .title{
@@ -128,6 +129,11 @@ body{
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .to-do-delete-button:hover{
