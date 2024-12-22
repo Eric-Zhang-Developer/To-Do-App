@@ -113,6 +113,7 @@ body{
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
+  color: black;
 
 
   border-radius: 5px;
@@ -130,6 +131,7 @@ body{
   border-width: 1px;
   border-radius: 5px;
   padding: 0;
+  color: black;
 
   display: flex;
   justify-content: center;
