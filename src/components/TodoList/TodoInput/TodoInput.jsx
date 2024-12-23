@@ -6,8 +6,14 @@ function TodoInput({ onAddTodo }) {
 
   // This handles form sumbmission
   const handleClick = () => {
-    onAddTodo(inputText);
-    setInputText("");
+    if (!inputText === ''){
+      onAddTodo(inputText);
+      setInputText("");
+    }
+    else{
+      console.log("Error! Input Field is Blank");
+    }
+
   };
 
   return (
