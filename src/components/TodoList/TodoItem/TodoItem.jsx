@@ -1,13 +1,19 @@
-import './TodoItem.css'
+import "./TodoItem.css";
 
-function TodoItem({text, checked}){
-  return(
-    <li className='to-do-container'>
-      <input className='to-do-check-box' type='checkbox'></input>
-      <p className='to-do-text-box'>{text}</p>
-      <button className='to-do-delete-button'>×</button>
+function TodoItem({ text, checked, id, onSetCheckedStatus }) {
+  
+  
+  return (
+    <li className={`to-do-container ${checked && 'checked'}`}>
+      <input
+        className="to-do-check-box"
+        type="checkbox"
+        onChange={() => onSetCheckedStatus(id)}
+      ></input>
+      <p className="to-do-text-box">{text}</p>
+      <button className="to-do-delete-button">×</button>
     </li>
-  )
+  );
 }
 
-export default TodoItem
+export default TodoItem;
