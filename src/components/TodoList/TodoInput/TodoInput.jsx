@@ -6,7 +6,7 @@ function TodoInput({ onAddTodo }) {
 
   // This handles form sumbmission
   const handleClick = () => {
-    if (!inputText === ''){
+    if (!(inputText === '')){
       onAddTodo(inputText);
       setInputText("");
     }
