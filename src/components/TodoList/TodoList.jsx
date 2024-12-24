@@ -7,6 +7,7 @@ import { useState } from 'react'
 function TodoList(){
   const [todoArray, setToDoArray] = useState([]);
 
+  // Adds new To Do
   const addNewTodo = (text) =>{
     const newTodo = {
       id: Date.now(),
@@ -16,6 +17,7 @@ function TodoList(){
     setToDoArray([...todoArray, newTodo]);
   }
 
+  // Returns a new array with the element with the check being switched
   const toggleChecked = (id) =>{
     setToDoArray(todoArray.map(toDo => {
       if (toDo.id === id){
@@ -27,6 +29,12 @@ function TodoList(){
 
     }))
   }
+
+  const deleteToDo = (id) =>{
+    setToDoArray(todoArray.filter(todo => todo.id != id));
+  }
+
+  // Crete the input along with a todoItem for each todo in the array
   return(
     <>
       <TodoInput onAddTodo={addNewTodo}></TodoInput>
@@ -34,6 +42,7 @@ function TodoList(){
         {todoArray.map((todo) => (
           <TodoItem
             onSetCheckedStatus={toggleChecked}
+            onDeleteToDo={deleteToDo}
             key={todo.id}
             id = {todo.id}
             text={todo.text}

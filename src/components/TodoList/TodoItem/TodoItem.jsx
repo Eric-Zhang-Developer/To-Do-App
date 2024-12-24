@@ -1,6 +1,6 @@
 import "./TodoItem.css";
 
-function TodoItem({ text, checked, id, onSetCheckedStatus }) {
+function TodoItem({ text, checked, id, onSetCheckedStatus, onDeleteToDo }) {
   
   
   return (
@@ -11,7 +11,7 @@ function TodoItem({ text, checked, id, onSetCheckedStatus }) {
         onChange={() => onSetCheckedStatus(id)}
       ></input>
       <p className="to-do-text-box">{text}</p>
-      <button className="to-do-delete-button">×</button>
+      <button className="to-do-delete-button" onClick={() => onDeleteToDo(id)}>×</button>
     </li>
   );
 }
