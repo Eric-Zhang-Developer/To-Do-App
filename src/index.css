@@ -9,3 +9,14 @@ body{
   height: 100vh;
   padding: 1rem;
 }
+
+@media screen and (max-width: 480px) {
+  :root{
+    font-size: 25px;
+  }
+
+  body{
+    margin: 4px;
+    padding: .5 rem;
+  }
+}

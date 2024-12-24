@@ -34,6 +34,7 @@
   list-style-position: inside;
   font-size: 1rem;
   margin: 0px;
+  overflow-wrap: break-word;
 }
 
 .to-do-check-box{
@@ -74,4 +75,17 @@
   background-color: rgb(255, 50, 50);
   scale: 1.1;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+  .to-do-container{
+    margin-right: 0rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    gap: .5rem;
+  }
+
+  .to-do-text-box{
+    text-align: center;
+  }
 }

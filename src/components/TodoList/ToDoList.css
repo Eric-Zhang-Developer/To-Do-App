@@ -3,3 +3,9 @@
   flex-direction: column;
   align-items: flex-start
 }
+
+@media screen and (max-width: 480px) {
+  .to-do-list{
+    padding-left: 0rem;
+  }
+}
