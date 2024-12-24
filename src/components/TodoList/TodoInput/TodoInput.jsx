@@ -5,7 +5,7 @@ function TodoInput({ onAddTodo }) {
   const [inputText, setInputText] = useState("");
 
   // This handles form sumbmission
-  const handleClick = () => {
+  const handleCreateTodo = () => {
     if (!(inputText === '')){
       onAddTodo(inputText);
       setInputText("");
@@ -24,9 +24,14 @@ function TodoInput({ onAddTodo }) {
         placeholder="Enter To-Do"
         value={inputText}
         onChange={(event) => setInputText(event.target.value)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter'){
+            handleCreateTodo();
+          }
+        }}
       ></input>
 
-      <button className="create-to-do-button" onClick={handleClick}>
+      <button className="create-to-do-button" onClick={handleCreateTodo}>
         Create To-Do
       </button>
     </div>
