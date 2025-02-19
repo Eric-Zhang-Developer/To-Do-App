@@ -22,5 +22,3 @@ A web-based to-do list application for managing tasks, built as a learning proje
 ## Implementation Details
 [Technical highlights or interesting solutions]
 
-## Lessons Learned
-[Key takeaways from the development process]
